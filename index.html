@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTELEON404</title>
+  
+  <!-- Added JetBrains Mono for a clean, technical secondary font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0a0a0c;
+      --text-main: #f3f4f6;
+      --text-muted: #8b949e;
+      --accent: #00ffcc;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Space Grotesk', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      /* Subtle radial gradient to replace the flat black */
+      background-image: radial-gradient(circle at center, rgba(0, 255, 204, 0.05) 0%, transparent 60%);
+    }
+
+    .takeover-card {
+      text-align: center;
+      padding: 40px 60px;
+      /* Professional glass/card effect instead of heavy borders */
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      /* Smooth entrance animation */
+      animation: fadeUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 16px 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .highlight {
+      color: var(--accent);
+      text-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+    }
+
+    p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Professional status indicator */
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 255, 204, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 255, 204, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="takeover-card">
+    <h1>Takeover by <span class="highlight">INTELEON404</span></h1>
+    <p><span class="status-dot"></span> The system has been claimed</p>
+  </div>
+</body>
+</html>
